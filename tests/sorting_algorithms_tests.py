@@ -1,7 +1,7 @@
 import unittest
 import random
 
-from sorting_algorithms import bubble_sort
+from src.sorting_algorithms import bubble_sort
 
 
 class SortingAlgorithmTests(unittest.TestCase):
@@ -13,7 +13,7 @@ class SortingAlgorithmTests(unittest.TestCase):
         return random_arr
 
     def test_bubble_sort(self):
-        for arrays in range(2 ** 4):  # test on 2 ** 4 arrays
+        for arrays in range(2 ** 4):  # tests on 2 ** 4 arrays
             arr_length = random.randint(2 ** 4, 2 ** 8)
             unsorted_arr = self.__generate_random_array(arr_length)
             expected_arr = sorted(unsorted_arr)
