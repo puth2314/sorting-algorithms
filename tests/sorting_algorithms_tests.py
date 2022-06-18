@@ -21,6 +21,24 @@ class SortingAlgorithmTests(unittest.TestCase):
         actual_arr = bubble_sort(unsorted_arr)
         self.assertListEqual(expected_arr, actual_arr)
 
+    def test_bubble_sort_single(self):
+        unsorted_arr = [69]
+        expected_arr = [69]
+        actual_arr = bubble_sort(unsorted_arr)
+        self.assertListEqual(expected_arr, actual_arr)
+
+    def test_bubble_sort_double0(self):
+        unsorted_arr = [0, 1]
+        expected_arr = [0, 1]
+        actual_arr = bubble_sort(unsorted_arr)
+        self.assertListEqual(expected_arr, actual_arr)
+
+    def test_bubble_sort_double1(self):
+        unsorted_arr = [1, 0]
+        expected_arr = [0, 1]
+        actual_arr = bubble_sort(unsorted_arr)
+        self.assertListEqual(expected_arr, actual_arr)
+
     def test_bubble_sort_random(self):
         unsorted_arr = self.gen_random_array(random.randint(2 ** 4, 2 ** 8))
         expected_arr = sorted(unsorted_arr)
